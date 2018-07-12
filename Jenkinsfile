@@ -3,6 +3,14 @@ pipeline {
     label 'jdk8'
   }
   stages {
+    stage('Deploy') {
+      input {
+        message 'Should we continue?'
+      }
+      steps {
+        echo 'Continuing with deployment'
+      }
+    }
     stage('Say Hello') {
       steps {
         echo "Hello ${params.Name}!"
