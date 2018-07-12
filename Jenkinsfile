@@ -11,7 +11,7 @@ pipeline {
         sh 'java -version'
       }//steps
     }//stage
-    stage('Deploy') {
+    /*stage('Deploy') {
       options {
         timeout(time: 30, unit: 'SECONDS') 
       }
@@ -25,7 +25,7 @@ pipeline {
       steps {
         echo "Deploying ${APP_VERSION}."
       }
-    }//stage
+    }//stage*/
     stage('Get Kernel') {
       steps {
         script {
