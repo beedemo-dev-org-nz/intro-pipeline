@@ -61,7 +61,13 @@ pipeline {
             }//steps
           }//stage java9
         }//parallel
-      }//stage
+      }//stage Testing
+      stage('Checkpoint') {
+         agent none
+         steps {
+            checkpoint 'Checkpoint'
+         }
+      }//checkpoint stage
   }//stages
   environment {
     MY_NAME = 'Mary'
